@@ -29,7 +29,6 @@ This command should force-enable it for ALL USERS:
 `sudo ln -s /usr/share/doc/pipewire/examples/systemd/user/* /etc/systemd/user`
 
 However, the latter will be missing two socket wants:
-
 ```
 sudo ln -s /usr/share/doc/pipewire/examples/systemd/user/pipewire-pulse.service /etc/systemd/user/default.target.wants/pipewire-pulse.service
 sudo ln -s /usr/share/doc/pipewire/examples/systemd/user/pipewire-pulse.socket /etc/systemd/user/socket.target.wants/pipewire-pulse.socket
@@ -40,11 +39,12 @@ sudo ln -s /usr/share/doc/pipewire/examples/systemd/user/pipewire-pulse.socket /
 PulseAudio is surprisingly resilient. The shortest way to tell it off is to mask the service.
 
 This is for your own user:
-1. `mkdir -p $HOME/.config/systemd/user`
-2. `systemctl --user mask pulseaudio.socket`
+```
+mkdir -p $HOME/.config/systemd/user
+systemctl --user mask pulseaudio.socket
+```
 
 This is for ALL USERS:
-
 ```
 sudo ln -s /dev/null /etc/systemd/user/pulseaudio.service
 sudo ln -s /dev/null /etc/systemd/user/pulseaudio.socket
@@ -52,3 +52,4 @@ sudo ln -s /dev/null /etc/systemd/user/pulseaudio.socket
 
 ## Reboot and hope for the best
 
+See [the first item](#no-guarantees).
