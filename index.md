@@ -2,7 +2,7 @@
 
 ## Why?
 
-Just to have a centralized page for them, eh.
+Just to have a centralized page for them. Seriously, I cannot be arsed.
 
 ## Gimme
 

@@ -50,6 +50,19 @@ sudo ln -s /dev/null /etc/systemd/user/pulseaudio.service
 sudo ln -s /dev/null /etc/systemd/user/pulseaudio.socket
 ```
 
+For good measure: edit /etc/pulse/client.conf so that these two lines are in there, either uncommented or just filled this way:
+
+```
+autospawn = no
+daemon-binary = /bin/true
+```
+
+In many cases, the lines would be (originally):
+```
+; autospawn = yes
+; daemon-binary = SOMETHING_I_DON'T_REMEMBER
+```
+
 ## Reboot and hope for the best
 
-See [the first item](#no-guarantees).
+See [the first item on this page](#no-guarantees).
