@@ -23,10 +23,14 @@ As usual, force an install via `dpkg -i`. libspa-0.2 will end up in a broken sta
 ## Enable PipeWire
 
 This command should force-enable it for your own user:
-`systemctl --user enable pipewire-pulse.service pipewire-pulse.socket`
+```
+systemctl --user enable pipewire-pulse.service pipewire-pulse.socket
+```
 
 This command should force-enable it for ALL USERS:
-`sudo ln -s /usr/share/doc/pipewire/examples/systemd/user/* /etc/systemd/user`
+```
+sudo ln -s /usr/share/doc/pipewire/examples/systemd/user/* /etc/systemd/user
+```
 
 However, the latter will be missing two socket wants:
 ```
