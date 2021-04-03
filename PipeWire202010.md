@@ -32,7 +32,7 @@ This command should force-enable it for ALL USERS:
 sudo ln -s /usr/share/doc/pipewire/examples/systemd/user/* /etc/systemd/user
 ```
 
-However, the latter will be missing two socket wants:
+However, the latter will be missing two systemd wants:
 ```
 sudo ln -s /usr/share/doc/pipewire/examples/systemd/user/pipewire-pulse.service /etc/systemd/user/default.target.wants/pipewire-pulse.service
 sudo ln -s /usr/share/doc/pipewire/examples/systemd/user/pipewire-pulse.socket /etc/systemd/user/socket.target.wants/pipewire-pulse.socket
