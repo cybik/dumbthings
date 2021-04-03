@@ -8,8 +8,9 @@ This was written from memory. I give no guarantees as to the reliability of this
 
 1. Insanity
 2. A working install of Ubuntu 20.10 (I used Pop_OS)
-3. Most (all?) of the PipeWire compiled packages from https://tracker.debian.org/pkg/pipewire for your arch
+3. Most (all?) of the PipeWire compiled packages from [the Debian Pipewire package tracker](https://tracker.debian.org/pkg/pipewire) for your arch.
   * At time of writing, I used 0.3.24-3
+  * At time of writing, I used the Experimental packages for absolute latest. You may want to risk a bit less and go with Sid (unstable) or Bullseye (testing).
 4. Missing/broken Pipewire dependencies (via https://packages.debian.org/unstable/libspa-0.2-bluetooth)
   * [libopenaptx0_0.2.0-5](https://packages.debian.org/sid/libopenaptx0)
   * [libopenaptx-dev_0.2.0-5](https://packages.debian.org/sid/libopenaptx-dev)
